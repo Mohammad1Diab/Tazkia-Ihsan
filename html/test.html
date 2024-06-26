@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Audio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .audio-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .download-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #629765;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .download-button:hover {
+            background-color: #507a5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-container">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Download Audio</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <div class="audio-container">
+                <audio id="audio" controls>
+                    <source src="../Audios/Maktub62vol1-lesson-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <img src="../Media/Banner.png"  id="img">
+         
+                    <button class="download-button" data-download="img">Download Audio</button>
+            </div>
+        
+            <script src="script.js">
+                const downloadLinks = document.querySelectorAll("[data-download]");
+                downloadLinks.forEach(button => {
+                    const id = button.dataset.download;
+                    const image = document.getElementById(id);
+                    const a = document.createElement("a");
+                    a.href = image.src;
+                    a.download = "lesson1";
+                    a.style.display = "none";
+
+                    button.addEventListener("click", () => {
+
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    })
+                });
+            </script>
+        </body>
+        </html>
+        
+    </div>
+
+    <script>
+
+
+    </script>
+</body>
+</html>
