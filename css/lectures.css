@@ -373,11 +373,11 @@ Body {
 
       /* Animation Cards*/
       .cardAnimation{
-            animation: fadeInRight 1s both;
+            animation: fadeInRightcard 1s both;
       }
 
 
-  @keyframes fadeInRight{
+  @keyframes fadeInRightcard{
     0%{
       opacity: 0;
       transform: translateY(50px);
