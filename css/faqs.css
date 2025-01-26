@@ -1,0 +1,89 @@
+
+  /* Site Input */
+  .Header {
+    font-family: arial;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-left: 5px solid #629765;
+    padding-left: 5px;
+    margin-top: 50px;
+  }
+
+    /* Filter */
+    .d-flex {
+      flex-wrap: wrap; /* Enable wrapping to the next row */
+      gap: 8px; 
+    }
+    
+    .filter_buttons {
+    min-width: 80px; /* Ensure a minimum width for the buttons */
+    padding: 1px 15px; /* Adjust padding for better touch targets */
+    outline: none;
+    border: none;
+    min-width: 70px!important;
+    border-radius: 10px;
+    opacity: 90%;
+    transition: ease-in-out 0.4s;
+    background-color: #ecf8ee;
+  }
+
+  .filter_buttons:hover {
+    background-color: #629765;
+    color: white;
+    opacity: 80%;
+  }
+  .active_button:hover {
+    opacity: 100%;
+  }
+  .active_button {
+    background-color: #629765;
+    color: white;
+    opacity: 100%;
+  }
+
+  /* Accordions */
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  max-width: 800px!important;
+  background-color: #fff !important;
+  color: black!important;
+  border: none !important; 
+  border-bottom: 2px solid #629765!important; 
+  padding: 15px !important; 
+  font-size: 1 rem !important; 
+  font-weight: 500 !important; 
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+  border-radius: 0!important;
+}
+
+/* Customize hover effect for accordion button */
+.accordion-button:hover {
+  background-color: #e9ecef !important; 
+  color: black !important;
+}
+
+.accordion-body{
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 800px!important;
+}
+
+
+.accordion-item {
+  border: none!important; 
+}
+
+.accordion-body {
+  padding: 15px !important; 
+  border-top: 1px solid #ddd !important; 
+  background-color: #f8f9fa !important; 
+}
+
+
+
+
+  
