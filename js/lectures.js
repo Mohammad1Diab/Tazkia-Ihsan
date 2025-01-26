@@ -1,61 +1,28 @@
-// Animation card ongoing
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lectureCard = document.querySelector('.lectureCard');
+// Animation Lectures
+function animationlectures(selector) {
+    const card = document.querySelector(selector);
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                lectureCard.classList.add('cardAnimation');
+                card.classList.add('cardAnimation');
             }
         });
     }, {
         threshold: 0.1
     });
 
-    observer.observe(lectureCard);
-});
+    observer.observe(card);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const lectureCardSecond = document.querySelector('.lectureCardSecond');
+   animationlectures('.lectureCard');
+   animationlectures('.lectureCardSecond');
+    animationlectures('.lectureCardThird');
+    animationlectures('.lectureCardFourth');
+  });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                lectureCardSecond.classList.add('cardAnimation');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    observer.observe(lectureCardSecond);
-});
-
-
-
-
-
-
-
-// Animation lecturesHeaderCompleted
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lectureHeaderCompleted = document.querySelector('.lectureHeaderCompleted');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                lectureHeaderCompleted.classList.add('fade-in');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    observer.observe(lectureHeaderCompleted);
-});
 
 
 
