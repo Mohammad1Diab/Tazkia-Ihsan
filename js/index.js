@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(aboutHeader);
 });
-
 //Animation Recent Articles Section
 document.addEventListener('DOMContentLoaded', () => {
     const recentArticlesHeader = document.querySelector('.recentArticlesHeader');
@@ -92,7 +91,7 @@ const quotes = {
     4: "Uthman bin Affan reported: The Prophet, ﷺ, said:<br><br>خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ <br> The best of you are those who learn the Quran and teach it. <br> [Ṣaḥīḥ al-Bukhārī 4739, Sahih]",
     5: "Abu Huraira reported: The Messenger of Allah, ﷺ, said:  <br><br> إِذَا مَاتَ الْإِنْسَانُ انْقَطَعَ عَنْهُ عَمَلُهُ إِلَّا مِنْ ثَلَاثَةٍ إِلَّا مِنْ صَدَقَةٍ جَارِيَةٍ أَوْ عِلْمٍ يُنْتَفَعُ بِهِ أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ  <br>When the human being dies, his deeds end except for three: ongoing charity, beneficial knowledge, or a righteous child who prays for him.<br> [Ṣaḥīḥ Muslim 1631, Sahih]",
     2: "Malik ibn Anas, May Allah have mercy on him, said:    <br><br> لا يَنْبَغِي لأَحَدٍ يَكُونُ عِنْدَهُ الْعِلْمُ أَنْ يَتْرُكَ التَّعَلُّمَ    <br>It is not befitting for anyone with knowledge to give up learning. <br> [Jāmi’ Bayān al-‘Ilm 423]"
-//tell Sheikh couldnt find other than for prophet and for Allah
+    //tell Sheikh couldnt find other than for prophet and for Allah
 };
 
 // Function to get the current quote based on the day of the week
@@ -102,11 +101,16 @@ function getDailyQuote() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const quoteContainer = document.getElementById('dailyHadithsSection');
     quoteContainer.innerHTML = getDailyQuote();
- 
+
 });
+
+
+
+
+
 
 
 
