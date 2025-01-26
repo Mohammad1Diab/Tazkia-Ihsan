@@ -1,4 +1,5 @@
 /* Banner/Header */
+
 .Banner {
   background-position: center;
   background-repeat: no-repeat;
@@ -231,6 +232,15 @@
   text-align: justify;
 }
 
+.contactbtn{
+  color: #3268ba;
+  text-decoration: underline;
+  cursor: pointer!important;
+}
+.contactbtn:hover{
+  color: #1456b8;
+}
+
 
 /* About Animation */
 
@@ -267,23 +277,22 @@
 
 /* Cards First*/
 
-.recentArticle {
+.recentArticle, .recentArticleSecond, .recentArticleThird {
   margin-top: 20px;
-  width: 300px;
+  width: 275px;
   outline: none;
   background-color: white;
   font-family: georgia;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   overflow: hidden;
-
-  opacity: 0;
-  transform: translateY(50px);
-  /* Start position */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.5s;
+  border-radius: 8px;
 }
 
-
-
+.recentArticle{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.5s;
+}
 
 .cardImage {
   background-position: center;
@@ -298,26 +307,27 @@
 .cardLink {
   text-decoration: none;
 }
-
+.cardCTA {
+  padding: 20px;
+}
 .carddescription {
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: black;
 }
 
 
 .cardButton {
-  padding-left: 5px;
-  padding-right: 5px;
   color: #629765;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transition: 1s;
 }
 
 .cardButton:hover {
   text-decoration: underline;
   color: #456f48;
+  text-shadow: none;
 }
 
 .cardInfo {
@@ -327,21 +337,14 @@
 /* Card Second */
 
 .recentArticleSecond {
-  margin-top: 20px;
-  width: 300px;
-  outline: none;
-  background-color: white;
-  font-family: georgia;
-  font-style: normal;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  overflow: hidden;
-
-
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.5s;
 }
 
+.cardCTASecond {
+  padding: 20px;
+}
 
 
 .cardImageSecond {
@@ -359,62 +362,29 @@
   text-decoration: none;
 }
 
-.cardInfoSecond {
-  height: 118px;
-}
-
-.iconCard {
-  position: relative;
-  top: 6px;
-  margin-left: 20px;
-}
-
 /* Card Third */
 
 .recentArticleThird {
-  margin-top: 20px;
-  width: 300px;
-  outline: none;
-  background-color: white;
-  font-family: georgia;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  overflow: hidden;
-
   opacity: 0;
   transform: translateY(150px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.5s;
-
-  display: none;
-  /* Enable Here */
 }
 
-
+.cardCTAThird{
+  padding: 20px;
+}
 
 .cardImageThird {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../Media/.jpg);
+  background-image: url(../Media/MihrabThree.png);
   /* Here Add Image */
   width: 100%;
   height: 315px;
   transition: 0.5s;
 }
 
-
-
-.cardHeaderThird {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 5px;
-  margin: 0;
-  color: white;
-  font-family: Arial;
-}
 
 .cardLinkThird {
   text-decoration: none;
@@ -426,24 +396,7 @@
   padding-right: 10px;
   padding-bottom: 10px;
   color: black;
-}
 
-
-.cardButtonThird {
-  margin-top: 30px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #629765;
-  transition: 1s;
-}
-
-.cardButtonThird:hover {
-  text-decoration: underline;
-  color: #456f48;
-}
-
-.cardInfoThird {
-  height: 225px;
 }
 
 
@@ -635,3 +588,4 @@
 
   }
 }
+
