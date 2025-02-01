@@ -1,15 +1,5 @@
 
-  /* Site Input */
-  .Header {
-    font-family: arial;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-left: 5px solid #629765;
-    padding-left: 5px;
-    margin-top: 50px;
-  }
-
-    /* Filter */
+    /* Filters */
     .d-flex {
       flex-wrap: wrap; /* Enable wrapping to the next row */
       gap: 8px; 
@@ -41,47 +31,44 @@
     opacity: 100%;
   }
 
-  /* Accordions */
 
-.accordion-button:focus {
-  box-shadow: none !important;
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%!important;
+    max-width: 500px!important; /* Matches input max-width */
 }
 
-.accordion-button {
-  max-width: 800px!important;
-  background-color: #fff !important;
-  color: black!important;
-  border: none !important; 
-  border-bottom: 2px solid #629765!important; 
-  padding: 15px !important; 
-  font-size: 1 rem !important; 
-  font-weight: 500 !important; 
-  transition: background-color 0.3s ease, color 0.3s ease !important;
-  border-radius: 0!important;
+.searchbar {
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 40px 10px 10px; 
+    width: 100%;
+    max-width: 500px;
+    border-bottom: 2px solid #629765;
+    font-size: 16px;
 }
 
-/* Customize hover effect for accordion button */
-.accordion-button:hover {
-  background-color: #e9ecef !important; 
-  color: black !important;
+.searchbar:hover {
+  background-color: #ecf8ee;
 }
 
-.accordion-body{
-  text-align: justify;
-  text-justify: inter-word;
-  max-width: 800px!important;
+.search-container .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: #629765;
+    pointer-events: none; 
 }
 
 
-.accordion-item {
-  border: none!important; 
-}
 
-.accordion-body {
-  padding: 15px !important; 
-  border-top: 1px solid #ddd !important; 
-  background-color: #f8f9fa !important; 
-}
+
 
 
 
