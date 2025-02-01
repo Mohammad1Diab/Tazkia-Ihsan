@@ -1,3 +1,4 @@
+var active_button_counter = 0;
 // Filters
 function filters_all() {
     var all_button = document.getElementById("all_button");
@@ -7,8 +8,10 @@ function filters_all() {
     for (var i = 0; i < all_accordions.length; i++) {
         all_accordions[i].style.display = 'block';
     }
+
     active_button.classList.remove("active_button");
     all_button.classList.add("active_button");
+    active_button_counter = 0;
 }
 
 function filters_tasawwuf() {
@@ -26,6 +29,7 @@ function filters_tasawwuf() {
 
     active_button.classList.remove("active_button");
     tasawwuf_button.classList.add("active_button");
+    active_button_counter = 1;
 }
 
 function filters_mental() {
@@ -43,6 +47,7 @@ function filters_mental() {
 
     active_button.classList.remove("active_button");
     mental_button.classList.add("active_button");
+    active_button_counter = 2;
 }
 
 function filters_physical() {
@@ -60,6 +65,7 @@ function filters_physical() {
 
     active_button.classList.remove("active_button");
     physical_button.classList.add("active_button");
+    active_button_counter = 3;
 }
 
 function filters_social() {
@@ -78,21 +84,72 @@ function filters_social() {
 
     active_button.classList.remove("active_button");
     social_button.classList.add("active_button");
+    active_button_counter = 4;
 }
 
 
 // Searchbar
 function filterFAQs() {
     let input = document.getElementById("faqSearch").value.toLowerCase();
-    let faqs = document.querySelectorAll(".accordion-item"); // Select entire FAQ item
 
-    faqs.forEach(faq => {
-        let question = faq.querySelector(".accordion-button").innerText.toLowerCase(); // Get the text inside the button
-        // Show if the search matches either question
-        if (question.includes(input)) {
-            faq.style.display = "block";
-        } else {
-            faq.style.display = "none";
-        }
-    });
+    if (active_button_counter == 0) {
+        let faqs = document.querySelectorAll(".accordion-item"); // Select entire FAQ item
+        faqs.forEach(faq => {
+            let question = faq.querySelector(".accordion-button").innerText.toLowerCase(); // Get the text inside the button
+            // Show if the search matches either question
+            if (question.includes(input)) {
+                faq.style.display = "block";
+            } else {
+                faq.style.display = "none";
+            }
+        });
+    }
+    else if (active_button_counter == 1) {
+        let faqs = document.querySelectorAll(".tasawwuf");
+        faqs.forEach(faq => {
+            let question = faq.querySelector(".accordion-button").innerText.toLowerCase(); 
+
+            if (question.includes(input)) {
+                faq.style.display = "block";
+            } else {
+                faq.style.display = "none";
+            }
+        });
+    } else if (active_button_counter == 2) {
+        let faqs = document.querySelectorAll(".mental");
+        faqs.forEach(faq => {
+            let question = faq.querySelector(".accordion-button").innerText.toLowerCase(); 
+
+            if (question.includes(input)) {
+                faq.style.display = "block";
+            } else {
+                faq.style.display = "none";
+            }
+        });
+    }
+    else if (active_button_counter == 3) {
+        let faqs = document.querySelectorAll(".physical");
+        faqs.forEach(faq => {
+            let question = faq.querySelector(".accordion-button").innerText.toLowerCase(); 
+
+            if (question.includes(input)) {
+                faq.style.display = "block";
+            } else {
+                faq.style.display = "none";
+            }
+        });
+    }
+    else if (active_button_counter == 4) {
+        let faqs = document.querySelectorAll(".social");
+        faqs.forEach(faq => {
+            let question = faq.querySelector(".accordion-button").innerText.toLowerCase();
+
+            if (question.includes(input)) {
+                faq.style.display = "block";
+            } else {
+                faq.style.display = "none";
+            }
+        });
+    }
+
 }
