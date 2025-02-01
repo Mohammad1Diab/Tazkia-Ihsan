@@ -1,4 +1,4 @@
-
+// Filters
 function filters_all() {
     var all_button = document.getElementById("all_button");
     var all_accordions = document.getElementsByClassName("accordion-item");
@@ -78,4 +78,21 @@ function filters_social() {
 
     active_button.classList.remove("active_button");
     social_button.classList.add("active_button");
+}
+
+
+// Searchbar
+function filterFAQs() {
+    let input = document.getElementById("faqSearch").value.toLowerCase();
+    let faqs = document.querySelectorAll(".accordion-item"); // Select entire FAQ item
+
+    faqs.forEach(faq => {
+        let question = faq.querySelector(".accordion-button").innerText.toLowerCase(); // Get the text inside the button
+        // Show if the search matches either question
+        if (question.includes(input)) {
+            faq.style.display = "block";
+        } else {
+            faq.style.display = "none";
+        }
+    });
 }
