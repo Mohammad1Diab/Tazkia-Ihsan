@@ -88,21 +88,11 @@
 
 /* Lectures*/
 
-.lectureHeader {
-  font-family: arial;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-left: 10px solid #629765;
-  padding-left: 5px;
-  margin-bottom: 30px;
-
-}
-
 /* Cards*/
 
 
 
-.lectureCard{
+.lectureCard, .lectureCard2, .lectureCard3, .lectureCard4{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: box-shadow 0.6s, transform 1s, opacity 1s;
   transform: translateY(50px);
@@ -119,12 +109,14 @@
   padding: 10px;
   text-decoration: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .lecButton:hover {
   background-color: white;
   color: #629765;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 /* Animation Cards*/
@@ -150,55 +142,13 @@
 
 @media screen and (min-width: 768px) {
 
-  .lectureCard:hover,
-  .lectureCardSecond:hover {
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  .card:hover{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px!important;
   }
-}
-
-
-@media screen and (max-width: 575px) {
-
-  .cardImageOne {
-    background-image: url(../Media/maktubat.jpg);
-  }
-  .cardImageTwo {
-    background-image: url(../Media/Makkah.jpg);
-  }
-  .cardImageThree {
-    background-image: url(../Media/Verticalimg.jpg);
-  }
-  .cardImageFour {
-    background-image: url(../Media/masjidnabawwi.jpg);
-  }
-
-  .lectureCard,
-  .lectureCardSecond, .lectureCardThird, .lectureCardFourth {
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .cardImageOne,
-  .cardImageTwo, .cardImageThree, .cardImageFour {
-    height: 125px;
-    width: 100%;
-  }
-
 }
 
 
 /* Lectures */
-
-.lectureHeaderlec {
-  font-family: arial;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-left: 5px solid #629765;
-  padding-left: 5px;
-  margin-top: 50px;
-}
-
 
 .descriptionLec {
   background-position: center;
@@ -206,8 +156,6 @@
   background-size: cover;
   background-image: url(../Media/natureBackLec.png);
   width: 100%;
-
-
 
   color: white;
   text-align: justify;
@@ -221,22 +169,6 @@
   width: 100px;
 }
 
-
-.registerButton {
-  color: white;
-  transition: 0.6s;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25em;
-  outline: none;
-  border: none;
-  background-color: #629765;
-}
-
-.registerButton:hover {
-  background-color: white;
-  color: #629765;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
 
 /* General Talks Cards*/
 
@@ -263,18 +195,10 @@
 .cardsHeader {
   height: 50px;
 }
-
-/* Recordings*/
-
-.accordion {
-  border: 1px solid black !important;
-}
-
-.accordion button {
-  font-family: Arial;
-  font-size: 0.7em;
-  font-weight: bold;
-
+.iconCard {
+  vertical-align: middle;
+  line-height: 1;
+  padding-bottom: 3px; /* Adjust this value as needed */
 }
 
 
