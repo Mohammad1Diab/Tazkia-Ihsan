@@ -1,3 +1,4 @@
+
 Body {
     margin: 0;
     padding: 0;
@@ -19,6 +20,9 @@ Body p, Body span, body h1, body h2, body h3, body h4, body h5, body h6{
 /* Navbar */
 .NavHeader {
     letter-spacing: 1px;
+    font-size: 30px;
+    position: relative;
+    top: 7px;
 }
 
 .Naviglogo {
@@ -103,6 +107,20 @@ Body p, Body span, body h1, body h2, body h3, body h4, body h5, body h6{
         background-color: #d5d4b0;
         transition: transform 0.45s ease-out;
     }
+
+    .Naviglogo {
+        max-width: 60px;
+        max-height: 60px;
+        padding-top: 5px;
+    }
+
+    .NavHeader {
+        letter-spacing: 1px;
+        font-size: 20px;
+        position: relative;
+        top: 5px;
+    }
+    
 
 }
 
